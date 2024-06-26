@@ -5,7 +5,7 @@ const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
 const multer = require('multer');
 const path = require('path');
-const db = require('./database/db');  // Importing the database connection
+const db = require('../database/db');  // Importing the database connection
 
 const app = express();
 const port = 3001;
