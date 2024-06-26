@@ -26,6 +26,7 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage });
 
+
 // Register endpoint
 app.post('/register', async (req, res) => {
     const { username, password } = req.body;
@@ -111,7 +112,9 @@ app.get('/recipes', authenticateJWT, (req, res) => {
     }
 });
 
-
+app.get("/", async (req,res) => {
+    res.send("HEllo World");
+});
 
 //Listening to Server
 app.listen(port, () => {
