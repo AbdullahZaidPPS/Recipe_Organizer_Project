@@ -5,7 +5,7 @@ const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
 const multer = require('multer');
 const path = require('path');
-const db = require('../database/db');  // Importing the database connection
+const db = require('./database/db');  // Importing the database connection
 
 const app = express();
 const port = 3001;
@@ -112,9 +112,7 @@ app.get('/recipes', authenticateJWT, (req, res) => {
     }
 });
 
-app.get("/", async (req,res) => {
-    res.send("HEllo World");
-});
+
 
 //Listening to Server
 app.listen(port, () => {
